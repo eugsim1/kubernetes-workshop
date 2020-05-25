@@ -11,4 +11,4 @@ spec:
       protocol: TCP
   imagePullSecrets:
     - name: ocirsecret 
-### k create -f  https://rawhttps://github.com/eugsim1/kubernetes-workshop/
+### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/pods/kubia-manual.yaml
