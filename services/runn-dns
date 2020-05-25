@@ -1,0 +1,3 @@
+ k exec -it kubia-cmg8g -- bash
+ curl http://kubia.default
+ cat /etc/resolv.conf
