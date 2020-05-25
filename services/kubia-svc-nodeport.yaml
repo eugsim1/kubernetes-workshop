@@ -11,4 +11,4 @@ spec:
   selector:
     app: kubia
 ###
-### k create -f 
+### k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc-nodeport.yaml
