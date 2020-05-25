@@ -7,8 +7,10 @@ metadata:
     env: prod
 spec:
   containers:
-  - image: luksa/kubia
+  - image: fra.ocir.io/oraseemeatechse/es-repo/kubia:latest
     name: kubia
     ports:
     - containerPort: 8080
       protocol: TCP
+  imagePullSecrets:
+    - name: ocirsecret
