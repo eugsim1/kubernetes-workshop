@@ -10,3 +10,5 @@ spec:
     nodePort: 30123
   selector:
     app: kubia
+###
+### k create -f 
