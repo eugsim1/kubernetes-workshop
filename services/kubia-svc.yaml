@@ -16,5 +16,13 @@ spec:
 ### k  create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
 ### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/pods/kubia-manual.yaml
 ### k get svc
-### k get po
-### k exec kubia-manual -- curl -s https://10.96.200.173
+### k get pods
+##  k get svc
+## NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+## kubernetes   ClusterIP   10.96.0.1     <none>        443/TCP   32m
+## kubia        ClusterIP   10.96.119.3   <none>        80/TCP    30s
+## k get pods
+## NAME          READY   STATUS    RESTARTS   AGE
+## kubia-jbb6v   1/1     Running   0          8m46s
+## k exec kubia-jbb6v -- curl -s http://10.96.119.3
+### You've hit kubia-jbb6v
