@@ -1,4 +1,4 @@
-### k -f create https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
+### k  create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
 ###
 apiVersion: v1
 kind: Service
