@@ -12,3 +12,4 @@ spec:
   imagePullSecrets:
     - name: ocirsecret 
 ### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/pods/kubia-manual.yaml
+### k logs kubia-manual
