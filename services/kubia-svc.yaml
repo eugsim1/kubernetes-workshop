@@ -1,4 +1,5 @@
-### k -f create 
+### k -f create https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
+###
 apiVersion: v1
 kind: Service
 metadata:
