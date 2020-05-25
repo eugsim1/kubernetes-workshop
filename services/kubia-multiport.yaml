@@ -1,0 +1,32 @@
+### k  create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
+###
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubia
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+  - name: https
+    port: 443
+    targetPort: 8443
+  selector:
+    app: kubia
+
+### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/rc/kubia-rc.yaml 
+### k get pods
+### k  create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-multiport.yaml
+### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/pods/kubia-manual.yaml
+### k get svc
+### k get pods
+##  k get svc
+## NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+## kubernetes   ClusterIP   10.96.0.1     <none>        443/TCP   32m
+## kubia        ClusterIP   10.96.119.3   <none>        80/TCP    30s
+## k get pods
+## NAME          READY   STATUS    RESTARTS   AGE
+## kubia-jbb6v   1/1     Running   0          8m46s
+## k exec kubia-jbb6v -- curl -s http://10.96.119.3
+### You've hit kubia-jbb6v
