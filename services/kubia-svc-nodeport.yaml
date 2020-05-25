@@ -13,3 +13,4 @@ spec:
 ###
 ### k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc-nodeport.yaml
 ### k  get svc kubia-nodeport
+### kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}'
