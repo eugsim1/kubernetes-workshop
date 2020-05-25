@@ -18,4 +18,4 @@ spec:
         - containerPort: 8080
       imagePullSecrets:
         - name: ocirsecret
-### k create -f         
+### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/rc/kubia-rc.yaml       
