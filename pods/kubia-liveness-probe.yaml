@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-liveness
+spec:
+  containers:
+  - image: fra.ocir.io/oraseemeatechse/es-repo/kubia:latest
+    name: kubia
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8999
+  imagePullSecrets:
+    - name: ocirsecret
