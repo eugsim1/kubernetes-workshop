@@ -10,3 +10,8 @@ spec:
     targetPort: 8080
   selector:
     app: kubia
+    
+### k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/pods/kubia-manual.yaml
+### k get svc
+### k get po
+### k exec kubia-manual -- curl -s https://10.96.200.173
