@@ -34,3 +34,6 @@ spec:
     targetPort: 80
   selector:
     app: helloworld
+    
+    
+### k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/hello.yaml    
