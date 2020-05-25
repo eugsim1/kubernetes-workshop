@@ -12,3 +12,4 @@ spec:
     app: kubia
 ###
 ### k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc-nodeport.yaml
+### k  get svc kubia-nodeport
