@@ -10,4 +10,4 @@ spec:
   selector:
     app: kubia
     
-### k create -f kubia-svc-loadbalancer.yaml    
+### k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc-loadbalancer.yaml   
