@@ -18,3 +18,16 @@ spec:
     - name: https
       port: 443
       targetPort: https
+      
+###  kubectl apply -f cloud-generic.yaml  
+## kubectl get svc -n ingress-nginx
+## kubectl get svc -n ingress-nginx
+### creating tls secret 
+### openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
+### kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+### setting up the external backend
+### use kubia ...
+### create an ingress to access the backend using the ingress controller
+### 
+
+
