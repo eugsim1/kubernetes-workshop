@@ -1,12 +1,13 @@
-### https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
-### https://github.com/kubernetes/ingress-nginx
-### kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
-#### kubectl apply -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/cloud-generic.yaml
-#### kubectl get svc -n ingress-nginx
-#### openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
-#### kubectl create secret tls tls-secret --key tls.key --cert tls.crt
-#### kubectl create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/ingress.yaml
-#### kubectl get svc --all-namespaces
+ https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
+ https://github.com/kubernetes/ingress-nginx
+ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+ kubectl apply -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/cloud-generic.yaml
+ kubectl get svc -n ingress-nginx
+ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
+ kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+ kubectl create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/ingress.yaml
+ kubectl get svc --all-namespaces
+ 
 curl -I http://129.146.214.219
 curl -ikL http://129.146.214.219
 curl -k https://129.146.214.219
