@@ -1,6 +1,13 @@
 ### https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
 ### https://github.com/kubernetes/ingress-nginx
-# kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+### kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+#### kubectl apply -f cloud-generic.yaml
+#### kubectl get svc -n ingress-nginx
+#### openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
+#### kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+#### kubectl create -f ingress.yaml
+#### kubectl get svc --all-namespaces
+
 
 apiVersion: v1
 kind: Namespace
