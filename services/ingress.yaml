@@ -1,0 +1,34 @@
+#### https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
+####
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world-ing
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - secretName: tls-secret
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: docker-hello-world-svc
+          servicePort: 8088
+          
+#### kubectl create -f ingress.yaml
+### kubectl get svc --all-namespaces
+### curl -I http://129.146.214.219
+### curl -ikL http://129.146.214.219
+## $ curl -k https://129.146.214.219
+
+<h1>Hello webhook world from: docker-hello-world-1732906117-6115l</h1>
+
+$ curl -k https://129.146.214.219
+
+<h1>Hello webhook world from: docker-hello-world-1732906117-7r89v</h1>
+
+$ curl -k https://129.146.214.219
+
+<h1>Hello webhook world from: docker-hello-world-1732906117-0ztkm</h1>
+
