@@ -8,6 +8,8 @@ k create -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/maste
 k create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/kubia-svc.yaml
 ```
 ## delete the cluster 
+```
 delete_kubernetes.sh
+```
 
 #### end of file
