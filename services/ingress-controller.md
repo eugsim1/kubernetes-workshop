@@ -1,7 +1,7 @@
  https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
  
  https://github.com/kubernetes/ingress-nginx
- 
+``` 
  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
  
  kubectl apply -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/cloud-generic.yaml
@@ -27,6 +27,8 @@ kubectl get po -n ingress-nginx
 kubectl exec -n ingress-nginx -it nginx-ingress-controller-110676328-h86xg -- cat /etc/nginx/nginx.conf
 
 proxy_pass http://upstream_balancer;
+```
+
 ```
 upstream upstream_balancer {
                 server 0.0.0.1:1234; # placeholder
