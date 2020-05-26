@@ -13,7 +13,7 @@ spec:
   - http:
       paths:
       - backend:
-          serviceName: docker-hello-world-svc
+          serviceName: kubia
           servicePort: 8088
           
 #### kubectl create -f ingress.yaml
