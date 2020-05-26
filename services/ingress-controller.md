@@ -1,20 +1,33 @@
  https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm
+ 
  https://github.com/kubernetes/ingress-nginx
+ 
  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+ 
  kubectl apply -f  https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/cloud-generic.yaml
  kubectl get svc -n ingress-nginx
+ 
  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
+ 
  kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+ 
  kubectl create -f https://raw.githubusercontent.com/eugsim1/kubernetes-workshop/master/services/ingress.yaml
+ 
  kubectl get svc --all-namespaces
  
+ 
 curl -I http://129.146.214.219
-curl -ikL http://129.146.214.219
-curl -k https://129.146.214.219
-kubectl get po -n ingress-nginx
-kubectl exec -n ingress-nginx -it nginx-ingress-controller-110676328-h86xg -- cat /etc/nginx/nginx.conf
-proxy_pass http://upstream_balancer;
 
+curl -ikL http://129.146.214.219
+
+curl -k https://129.146.214.219
+
+kubectl get po -n ingress-nginx
+
+kubectl exec -n ingress-nginx -it nginx-ingress-controller-110676328-h86xg -- cat /etc/nginx/nginx.conf
+
+proxy_pass http://upstream_balancer;
+```
 upstream upstream_balancer {
                 server 0.0.0.1:1234; # placeholder
 
@@ -22,9 +35,9 @@ upstream upstream_balancer {
                         tcp_udp_balancer.balance()
                 }
         }
+```
 
-
-
+```
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -340,3 +353,4 @@ spec:
     - name: https
       port: 443
       targetPort: https    
+```
